@@ -1,0 +1,2 @@
+# huxtao.github.io
+hugo
