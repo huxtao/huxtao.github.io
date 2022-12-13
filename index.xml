@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My New Hugo Site</title>
+    <link>http://gitee.com/</link>
+    <description>Recent content on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 07 Dec 2022 09:13:15 +0800</lastBuildDate><atom:link href="http://gitee.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux课堂笔记</title>
+      <link>http://gitee.com/post/blog/</link>
+      <pubDate>Wed, 07 Dec 2022 09:13:15 +0800</pubDate>
+      
+      <guid>http://gitee.com/post/blog/</guid>
+      <description>个人的一些Linux学习笔记 一、vi和vim编译器 介绍：vim具有程序编辑的能力，可以看做是vi的增强版本，可以主动的以字体颜色辨别语法的正确性，方便程序设计。代码补完、编译及错误跳转等方便编程的功能特别丰富，在程序员中被广泛使用。
+1、vim有三种模式 分别是命令模式、输入模式、底行模式，它们之间的切换如下图所示
+2、命令模式基本命令 ESC	退出插入 :w	保存 :q	退出 :q!	强制退出（不保存文件） vi和vim快捷方式
+#复制 yy(正常模式)	#拷贝当前行 p(正常模式)	#粘贴 *yy(正常模式)	#拷贝当前行向下*行 #删除 dd(正常模式)	#删除一行 *dd(正常模式)	#删除当前行向下的*行 #查找 /hello + 回车(正常模式) #查找关键字hello n(正常模式)	#查找下一个 #文件的行号 :set nu(命令模式)	#设置行号 :set nonu(命令模式)	#取消行号 #跳转到最末行 G(正常模式) #跳转到最首行 gg(正常模式) #撤销 u(正常模式) 3、键盘图 二、Linux文件管理 一般命令格式：命令 [-选项] [ 参数]
+1、pwd命令 (print working directory，打印查看当前工作目录) #pwd 2、ls命令 (列出当前工作目录下的所有文件名称) #ls 选项 选项解释： -l：表示list，表示以详细列表的形式进行展示 -a：表示显示所有的文件/文件夹（包含了隐藏文件/文件夹） -h：以可读性较高的形式显示文件大小 常见语法： #ls -l #ls -lh 3、mkdir命令 (make directory，创建目录) #mkdir 选项解释： -p：一次性创建多层目录 一次性创建多层目录举例： mkdir -p f1/f2/f3/f4 4、touch命令 (创建文件) #touch 可一次性创建多个文件，只需在后面添加文件名字即可 5、cp命令 (copy，复制) #cp 被复制文件路径	文件被复制到的路径 6、mv命令 (move，移动，剪切) #mv 需要移动的文档路径 需要保存的位置路径 7、rm命令 (remove，移除、删除) #rm 选项 需要移除的文档路径 选项解释： -f：force，强制删除，不提示是否删除 -r：表示递归 8、zip/unzip命令 (以zip格式将文件打包压缩或解压zip) （1）压缩 #zip 压缩后的文件名 压缩前的文件名 （2）解压 #uzip 压缩文件 9、tar命令 （1）压缩 #tar -czvf 打包文件名.</description>
+    </item>
+    
+  </channel>
+</rss>

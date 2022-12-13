@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>期末大作业 // My New Hugo Site</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.107.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="../../css/main.min.0fb49e70a30412f97ddfc418e18fefef1d9fcdebe45f634dbbba768b00fe1eec.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="期末大作业"/>
+<meta name="twitter:description" content="期末大作业（部分） 一、Linux中git的使用
+1、安装git
+#dnf install -y git 下面是一些常用的命令，在这里先记着
+命令 功能 git init 在本地的当前目录里初始化git仓库 git status 查看当前仓库的状态 git add -A 增加目录中所有的文件到缓存区 git commit -m &ldquo;信息&rdquo; 将缓存区中更改提交到本地仓库 git log 查看当前版本之前的提交记录 2、查看版本-配置用户名邮箱编码
+3、生成公私钥
+4、添加公钥
+5、克隆gitee仓库到linux
+6、将编写好的socket上传到gitee
+7、查看日志
+二、编写socker
+client.c部分代码
+//给服务端的地址结构体赋值 serv_addr.sin_family = AF_INET; serv_addr.sin_port = htons(SERV_PORT); //将主机上的小端字节序转换为网络传输的大端字节序（如果主机本身就是大端 字节序就不用转换了） serv_addr.sin_addr.s_addr = inet_addr(SERV_IP); //将字符串形式的ip地址转换为点分十进制格式的ip地址 //绑定地址信息到监听套接字上，第二个参数强转是因为形参类型为sockaddr ，而实参类型是sockaddr_in 型的 if(bind(servfd,(sockaddr *)&amp; serv_addr,sizeof(serv_addr)) == -1) { cout&lt;&lt;&#34;bind failed : &#34;&lt;&lt;strerror(errno)&lt;&lt;endl; return 0; } //将servfd套接字置为监听状态 if(listen(servfd,1024) == -1) { cout&lt;&lt;&#34;listen failed : &#34;&lt;&lt;strerror(errno)&lt;&lt;endl; return 0; } cout&lt;&lt;&#34;Init Success !"/>
+
+    <meta property="og:title" content="期末大作业" />
+<meta property="og:description" content="期末大作业（部分） 一、Linux中git的使用
+1、安装git
+#dnf install -y git 下面是一些常用的命令，在这里先记着
+命令 功能 git init 在本地的当前目录里初始化git仓库 git status 查看当前仓库的状态 git add -A 增加目录中所有的文件到缓存区 git commit -m &ldquo;信息&rdquo; 将缓存区中更改提交到本地仓库 git log 查看当前版本之前的提交记录 2、查看版本-配置用户名邮箱编码
+3、生成公私钥
+4、添加公钥
+5、克隆gitee仓库到linux
+6、将编写好的socket上传到gitee
+7、查看日志
+二、编写socker
+client.c部分代码
+//给服务端的地址结构体赋值 serv_addr.sin_family = AF_INET; serv_addr.sin_port = htons(SERV_PORT); //将主机上的小端字节序转换为网络传输的大端字节序（如果主机本身就是大端 字节序就不用转换了） serv_addr.sin_addr.s_addr = inet_addr(SERV_IP); //将字符串形式的ip地址转换为点分十进制格式的ip地址 //绑定地址信息到监听套接字上，第二个参数强转是因为形参类型为sockaddr ，而实参类型是sockaddr_in 型的 if(bind(servfd,(sockaddr *)&amp; serv_addr,sizeof(serv_addr)) == -1) { cout&lt;&lt;&#34;bind failed : &#34;&lt;&lt;strerror(errno)&lt;&lt;endl; return 0; } //将servfd套接字置为监听状态 if(listen(servfd,1024) == -1) { cout&lt;&lt;&#34;listen failed : &#34;&lt;&lt;strerror(errno)&lt;&lt;endl; return 0; } cout&lt;&lt;&#34;Init Success !" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/second_post/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-12-11T16:19:01+08:00" />
+<meta property="article:modified_time" content="2022-12-11T16:19:01+08:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="/"><img class="app-header-avatar" src="../../avatar.jpg" alt="John Doe" /></a>
+      <span class="app-header-title">My New Hugo Site</span>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/tags/">Tags</a>
+      </nav>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium.</p>
+      <div class="app-header-social">
+        
+          <a href="https://gitee.com/huxtao" target="_blank" rel="noreferrer noopener me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>My Github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">期末大作业</h1>
+      <div class="post-meta">
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Dec 11, 2022
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          2 min read
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <h2 id="期末大作业部分">期末大作业（部分）</h2>
+<p>一、Linux中git的使用</p>
+<p>1、安装git</p>
+<pre tabindex="0"><code>#dnf install -y git
+</code></pre><p><img src="../../1下载git.png" alt="1下载git"></p>
+<p>下面是一些常用的命令，在这里先记着</p>
+<table>
+<thead>
+<tr>
+<th><strong>命令</strong></th>
+<th><strong>功能</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>git init</td>
+<td>在本地的当前目录里初始化git仓库</td>
+</tr>
+<tr>
+<td>git status</td>
+<td>查看当前仓库的状态</td>
+</tr>
+<tr>
+<td>git add -A</td>
+<td>增加目录中所有的文件到缓存区</td>
+</tr>
+<tr>
+<td>git commit -m &ldquo;信息&rdquo;</td>
+<td>将缓存区中更改提交到本地仓库</td>
+</tr>
+<tr>
+<td>git log</td>
+<td>查看当前版本之前的提交记录</td>
+</tr>
+</tbody>
+</table>
+<p>2、查看版本-配置用户名邮箱编码</p>
+<p><img src="../../2查看版本-配置用户名邮箱编码等.png" alt="2查看版本-配置用户名邮箱编码等"></p>
+<p>3、生成公私钥</p>
+<p><img src="../../3生成公私钥.png" alt="3生成公私钥"></p>
+<p>4、添加公钥</p>
+<p><img src="../../4添加公钥.png" alt="4添加公钥"></p>
+<p>5、克隆gitee仓库到linux</p>
+<p><img src="../../5克隆gitee仓库到linux.png" alt="5克隆gitee仓库到linux"></p>
+<p>6、将编写好的socket上传到gitee</p>
+<p><img src="../../6将socket上传到gitee.png" alt="6将socket上传到gitee"></p>
+<p>7、查看日志</p>
+<p><img src="../../7日志.png" alt="7日志"></p>
+<p>二、编写socker</p>
+<p>client.c部分代码</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#75715e">//给服务端的地址结构体赋值
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        serv_addr.sin_family <span style="color:#f92672">=</span> AF_INET;
+</span></span><span style="display:flex;"><span>        serv_addr.sin_port <span style="color:#f92672">=</span> htons(SERV_PORT); <span style="color:#75715e">//将主机上的小端字节序转换为网络传输的大端字节序（如果主机本身就是大端
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#960050;background-color:#1e0010">字节序就不用转换了）</span>
+</span></span><span style="display:flex;"><span>        serv_addr.sin_addr.s_addr <span style="color:#f92672">=</span> inet_addr(SERV_IP); <span style="color:#75715e">//将字符串形式的ip地址转换为点分十进制格式的ip地址
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">//绑定地址信息到监听套接字上，第二个参数强转是因为形参类型为sockaddr ，而实参类型是sockaddr_in 型的
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span>(bind(servfd,(sockaddr <span style="color:#f92672">*</span>)<span style="color:#f92672">&amp;</span> serv_addr,<span style="color:#66d9ef">sizeof</span>(serv_addr)) <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>                cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;bind failed : &#34;</span><span style="color:#f92672">&lt;&lt;</span>strerror(errno)<span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">//将servfd套接字置为监听状态
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span>(listen(servfd,<span style="color:#ae81ff">1024</span>) <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>                cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;listen failed : &#34;</span><span style="color:#f92672">&lt;&lt;</span>strerror(errno)<span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;Init Success ! &#34;</span><span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>        cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;ip : &#34;</span><span style="color:#f92672">&lt;&lt;</span>inet_ntoa(serv_addr.sin_addr)<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;  port : &#34;</span><span style="color:#f92672">&lt;&lt;</span>ntohs(serv_addr.sin_port)<span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>        cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;Waiting for connecting ... &#34;</span><span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        socklen_t clit_size <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#75715e">//用于accept函数中保存客户端的地址结构体大小
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span> <span style="color:#75715e">//accept成功后，clitfd则指向了这条服务端与客户端成功连接的”通路“
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span>((clitfd <span style="color:#f92672">=</span> accept(servfd,(sockaddr <span style="color:#f92672">*</span>)<span style="color:#f92672">&amp;</span> clit_addr,<span style="color:#f92672">&amp;</span>clit_size)) <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>                cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;accept failed : &#34;</span><span style="color:#f92672">&lt;&lt;</span>strerror(errno)<span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;Client access : &#34;</span><span style="color:#f92672">&lt;&lt;</span>inet_ntoa(clit_addr.sin_addr)<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;  &#34;</span><span style="color:#f92672">&lt;&lt;</span>ntohs(clit_addr.sin_port)<span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">char</span> buf[<span style="color:#ae81ff">1024</span>]; <span style="color:#75715e">//用于读写数据
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span>(<span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">int</span> rdstate;
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span>((rdstate <span style="color:#f92672">=</span> read(clitfd,buf,<span style="color:#66d9ef">sizeof</span>(buf))) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span> )<span style="color:#75715e">//通过clitfd来读取数据，返回值为读取的长度
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                {
+</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>                        cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;(Server)recv : &#34;</span>;
+</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">for</span>(i<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;i<span style="color:#f92672">&lt;</span>rdstate;i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>                        {
+</span></span><span style="display:flex;"><span>                                cout<span style="color:#f92672">&lt;&lt;</span>buf[i];
+</span></span><span style="display:flex;"><span>                                buf[i] <span style="color:#f92672">=</span> toupper(buf[i]); <span style="color:#75715e">//转换为大写
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                        }
+</span></span><span style="display:flex;"><span>                        buf[i]<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;\0&#39;</span>;
+</span></span><span style="display:flex;"><span>                        cout<span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>                        write(clitfd,buf,strlen(buf)); <span style="color:#75715e">//发回客户端
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                }
+</span></span><span style="display:flex;"><span>                                <span style="color:#66d9ef">else</span> <span style="color:#a6e22e">if</span>(rdstate <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>)  <span style="color:#75715e">//客户端退出
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                {
+</span></span><span style="display:flex;"><span>                        cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;client exit ! &#34;</span><span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>        }
+</span></span></code></pre></div><p>service.c部分代码</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#75715e">//通过套接字发起连接请求，成功后clitfd套接字则表示此次成功的连接
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span>( connect(clitfd,(<span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">sockaddr</span><span style="color:#f92672">*</span>)<span style="color:#f92672">&amp;</span> serv_addr,<span style="color:#66d9ef">sizeof</span>(serv_addr)) <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>                cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;connet failed : &#34;</span><span style="color:#f92672">&lt;&lt;</span>strerror(errno)<span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;connect success !&#34;</span><span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span>(<span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">char</span> sdbuf[<span style="color:#ae81ff">1024</span>];
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">char</span> rvbuf[<span style="color:#ae81ff">1024</span>];
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">int</span> rdlen,sdlen,i<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>                cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;(Client)send : &#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">while</span>((sdbuf[i] <span style="color:#f92672">=</span> getchar()) <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#39;\n&#39;</span>)i<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span>(i<span style="color:#f92672">==</span><span style="color:#ae81ff">0</span>)<span style="color:#66d9ef">continue</span>; <span style="color:#75715e">//防止客户端只发一个换行符，此时i=0，write不发送数据，服务端就不回回发数据，然后客&gt;户端就一直阻塞在read处。因此如果i=0，则直接重新输入
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                sdlen <span style="color:#f92672">=</span> write(clitfd,sdbuf,i);  <span style="color:#75715e">//向套接字中写入数据发送
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                <span style="color:#75715e">/*1. write了多少字节就读取多少字节长的字符串*/</span>
+</span></span><span style="display:flex;"><span>                rdlen<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">while</span>(rdlen<span style="color:#f92672">&lt;</span>sdlen)<span style="color:#75715e">//防止发送端将数据分开发送
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                {
+</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">int</span> rdcnt <span style="color:#f92672">=</span> read(clitfd,<span style="color:#f92672">&amp;</span>rvbuf[rdlen],<span style="color:#66d9ef">sizeof</span>(rvbuf));
+</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">if</span>(rdcnt <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>                        {
+</span></span><span style="display:flex;"><span>                                perror(NULL);
+</span></span><span style="display:flex;"><span>                                <span style="color:#66d9ef">continue</span>;
+</span></span><span style="display:flex;"><span>                        }
+</span></span><span style="display:flex;"><span>                        rdlen<span style="color:#f92672">+=</span>rdcnt;
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span>(rdlen)
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    rvbuf[rdlen]<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;\0&#39;</span>;
+</span></span><span style="display:flex;"><span>                    cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;(Client)recv : &#34;</span><span style="color:#f92672">&lt;&lt;</span>rvbuf<span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;Server has closed ! &#34;</span><span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>                    cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;Client will close...&#34;</span><span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>                }
+</span></span></code></pre></div><p>实现通信</p>
+<p><img src="../../8.jpg" alt=""></p>
+<p><img src="../../9.jpg" alt=""></p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
+
